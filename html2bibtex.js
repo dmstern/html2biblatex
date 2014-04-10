@@ -20,7 +20,7 @@ if (mm < 10) {
     mm = '0' + mm;
 }
 
-// concat string for date:
+// create string for date:
 var urldate = yyyy + "-" + mm + "-" + dd;
 
 // remove special characters for citation key:
@@ -34,6 +34,7 @@ var citationKey = title_key + "_" + urldate;
 var type = "@Online";
 var filename = ":./references/" + title + ".html:html";
 
+// Replace german umalauts with latex commands:
 var title_tex = title.replace(/\u00e4/g, "\\\"a");
 title_tex = title_tex.replace(/\u00c4/g, "\\\"A");
 title_tex = title_tex.replace(/\u00f6/g, "\\\"o");
@@ -43,6 +44,13 @@ title_tex = title_tex.replace(/\u00dc/g, "\\\"U");
 title_tex = title_tex.replace(/\u00DF/g, "\\\"s");
 
 // generate BiBTeX entry:
-var bibTexEntry = type + "{" + citationKey + ",\n" + "\t title         \t\t = {" + title_tex + "},\n" + "\t author        \t\t = {" + "" + "},\n" + "\t organization  \t   = {" + "" + "},\n" + "\t file          \t\t = {" + filename + "},\n" + "\t url           \t\t\t = {" + url + "},\n" + "\t urldate       \t\t = {" + urldate + "}\n" + " }";
+var bibTexEntry = type + "{" + citationKey + ",\n"
+                + "\t title \t\t        = {" + title_tex    + "},\n"
+                + "\t author \t\t       = {" + ""           + "},\n"
+                + "\t organization \t   = {" + ""           + "},\n"
+                + "\t file \t\t         = {" + filename     + "},\n"
+                + "\t url \t\t\t        = {" + url          + "},\n"
+                + "\t urldate \t\t      = {" + urldate      + "}\n"
+                + " }";
 
 copyToClipboard(bibTexEntry);

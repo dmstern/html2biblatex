@@ -21,7 +21,7 @@ The JavaScript without whitescpaces.
 html2bibtex-min-win.js
 ----------------------
 
-The JavaScript without whitespaces in string for better platform and encoding support.
+The JavaScript without whitespaces in string ("\n", "\t") for better platform and encoding support.
 
 url-text.js
 -----------
