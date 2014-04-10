@@ -3,7 +3,36 @@ html2biblatex
 
 Javascript-"plugin" for exporting web pages to BibLaTeX.
 
-How to use it:
+--------------------------------------------------------
+
+File Description
+================
+--------------
+html2bibtex.js
+--------------
+
+The JavaScript, that I wrote.
+
+------------------
+html2bibtex-min.js
+------------------
+
+The JavaScript without whitescpaces.
+
+----------------------
+html2bibtex-min-win.js
+----------------------
+
+The JavaScript without whitespaces in string for better platform and encoding support.
+
+-----------
+url-text.js
+-----------
+
+The same content as 'html2bibtex-min-win.js' eccept a prefixed 'javascript:' for use in a browser bookmark.
+
+How To Use
+==========
 
  1. Create a new bookmark in the bookmark panel of your browser.
  2. Name it ("Export -> BibLaTeX" or whatever).
@@ -17,3 +46,14 @@ How to use it:
 
 
 Tested with Google Chrome and Epiphany (GNOME) under Ubuntu 13.10.
+
+
+=====================================================================
+
+Formatting BibLaTex Entry
+=========================
+
+For a more beatiful formatting of the BibLaTeX entry you can replace the part after "javascript:" of the file 'url-text.js' with the content from the file 'html2bibtex-min.js'.
+
+
+
