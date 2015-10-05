@@ -51,7 +51,7 @@ Tested with Google Chrome and Epiphany (GNOME) under Ubuntu 13.10.
 Formatting BibLaTex Entry
 =========================
 
-For a more beatiful formatting of the BibLaTeX entry you can replace the part after "javascript:" of the file 'url-text.js' with the content from the file 'html2bibtex-min.js'.
+For a more beautiful formatting of the BibLaTeX entry you can replace the part after "javascript:" of the file 'url-text.js' with the content from the file 'html2bibtex-min.js'.
 
 
 
