@@ -26,7 +26,7 @@ The JavaScript without whitespaces in string ("\n", "\t") for better platform an
 url-text.js
 -----------
 
-The same content as 'html2bibtex-min-win.js' eccept a prefixed 'javascript:' for use in a browser bookmark.
+The same content as 'html2bibtex-min-win.js' except a prefixed 'javascript:' for use in a browser bookmark.
 
 How To Use
 ==========
