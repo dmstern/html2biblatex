@@ -5,6 +5,10 @@ function copyToClipboard(text) {
 var title = document.title;
 var url = document.URL;
 
+// get author if meta tag exists:
+var author_tag = document.querySelector("[name=author]");
+var author = (author_tag == null) ? "" : author_tag.content;
+
 var today = new Date();
 var dd = today.getDate();
 var mm = today.getMonth() + 1;
@@ -46,7 +50,7 @@ title_tex = title_tex.replace(/\u00DF/g, "\\\"s");
 // generate BiBTeX entry:
 var bibTexEntry = type + "{" + citationKey + ",\n"
                 + "\t title \t\t        = {" + title_tex    + "},\n"
-                + "\t author \t\t       = {" + ""           + "},\n"
+                + "\t author \t\t       = {" + author       + "},\n"
                 + "\t organization \t   = {" + ""           + "},\n"
                 + "\t file \t\t         = {" + filename     + "},\n"
                 + "\t url \t\t\t        = {" + url          + "},\n"
