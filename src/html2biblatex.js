@@ -58,6 +58,5 @@
     urldate = {${urldate}}
   }`;
 
-  console.log(bibTexEntry);
   copyToClipboard(bibTexEntry);
 })();
