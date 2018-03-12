@@ -17,7 +17,7 @@ Installation
 
  1. Create a new bookmark in the bookmark panel of your browser.
  2. Name it ("🌐 ➜ 📚" or whatever).
- 3. URL: [Paste here the content from the file `bookmark-url.js`]
+ 3. URL: [Paste here the content from the file `dist/bookmark-url.js`]
  
 Usage
 ==========
