@@ -49,10 +49,9 @@
   title_tex = title_tex.replace(/\u00DF/g, '\\"s');
 
   // generate BiBTeX entry:
-  const bibTexEntry = `${type} { ${citationKey},}\r
+  const bibTexEntry = `${type} {${citationKey},\r
     title = {${title_tex}},\r
-    author = {${author}},\r
-    organization = {},\r
+    ${author? `author = {${author}},\r` : ''}
     file = {${filename}},\r
     url = {${url}},\r
     urldate = {${urldate}}\r
