@@ -49,13 +49,13 @@
   title_tex = title_tex.replace(/\u00DF/g, '\\"s');
 
   // generate BiBTeX entry:
-  const bibTexEntry = `${type} { ${citationKey},}
-    title = {${title_tex}},
-    author = {${author}},
-    organization = {},
-    file = {${filename}},
-    url = {${url}},
-    urldate = {${urldate}}
+  const bibTexEntry = `${type} { ${citationKey},}\r
+    title = {${title_tex}},\r
+    author = {${author}},\r
+    organization = {},\r
+    file = {${filename}},\r
+    url = {${url}},\r
+    urldate = {${urldate}}\r
   }`;
 
   copyToClipboard(bibTexEntry);
