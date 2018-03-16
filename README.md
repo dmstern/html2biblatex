@@ -30,9 +30,18 @@ Usage
     * JabRef: Just paste it into the open bibliography table.
     * Zotero: Go to 'file' -> 'import from clipboard'.
 
+**Example output:**
+```BibLaTeX
+@Online {HowdoIusethehtmltagmetanameauthorcontenttextMetaAuthorTagExplainedmetatagssearchenginepromotion-2018-03-16,
+ title = {How do I use the html tag <meta name="author" content="text"> | Meta Author Tag Explained | meta tags search engine promotion},
+ author = {the Metatags Company Inc. - seo services},
+ file = {:./references/meta_name_author.html:html},
+ url = {https://www.metatags.org/meta_name_author},
+ urldate = {2018-03-16}
+}
+```
 
 Tested with Google Chrome and Epiphany (GNOME) under Ubuntu 13.10.
-
 
 Build (for developers)
 ======================
@@ -43,4 +52,3 @@ Build (for developers)
   yarn install
   yarn start
   ```
-
