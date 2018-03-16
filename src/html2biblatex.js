@@ -35,7 +35,9 @@
   const citationKey = `${title_key}-${urldate}`;
 
   const type = "@Online";
-  const filename = `:./references/${window.location.pathname.slice(1).replace(/\//g, '-')}.html:html`;
+  const filename = `:./references/${window.location.pathname
+    .slice(1)
+    .replace(/\//g, "-")}.html:html`;
 
   // Replace german umalauts with latex commands:
   let title_tex = title
@@ -48,13 +50,13 @@
     .replace(/\u00DF/g, '\\"s');
 
   // generate BiBTeX entry:
-  const bibTexEntry = `${type} {${citationKey},\r
-    title = {${title_tex}},\r
-    ${author ? `author = {${author}},\r` : ""}
-    file = {${filename}},\r
-    url = {${url}},\r
-    urldate = {${urldate}}\r
-  }`;
+  const bibTexEntry = `${type} {${citationKey},\r\
+\ \ title = {${title_tex}},\r\
+${author ? `\ \ author = {${author}},\r` : ""}\
+\ \ file = {${filename}},\r\
+\ \ url = {${url}},\r\
+\ \ urldate = {${urldate}}\r\
+}`;
 
   copyToClipboard(bibTexEntry);
 })();
