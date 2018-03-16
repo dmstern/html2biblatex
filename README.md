@@ -30,13 +30,14 @@ Usage
     * JabRef: Just paste it into the open bibliography table.
     * Zotero: Go to 'file' -> 'import from clipboard'.
 
-**Example output:**
+**Sample output:**
 ```BibLaTeX
-@Online {HowdoIusethehtmltagmetanameauthorcontenttextMetaAuthorTagExplainedmetatagssearchenginepromotion-2018-03-16,
- title = {How do I use the html tag <meta name="author" content="text"> | Meta Author Tag Explained | meta tags search engine promotion},
- author = {the Metatags Company Inc. - seo services},
- file = {:./references/meta_name_author.html:html},
- url = {https://www.metatags.org/meta_name_author},
+@Online {UsingBibTeXashortguide-2018-03-16,
+ title = {Using BibTeX: a short guide},
+ date = {2015-11-02},
+ author = {Martin J. Osborne},
+ file = {:./references/osborne-latex-BIBTEX.HTM.html:html},
+ url = {https://www.economics.utoronto.ca/osborne/latex/BIBTEX.HTM},
  urldate = {2018-03-16}
 }
 ```

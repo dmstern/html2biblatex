@@ -3,6 +3,25 @@
     window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
   }
 
+  function jsDate2bibTex(date) {
+    let dd = date.getDate();
+    let mm = date.getMonth() + 1;
+    const yyyy = date.getFullYear();
+  
+    // Add zero prefix:
+    if (dd < 10) {
+      dd = `0${dd}`;
+    }
+  
+    // Add zero prefix:
+    if (mm < 10) {
+      mm = `0${mm}`;
+    }
+  
+    // create string for date:
+    return `${yyyy}-${mm}-${dd}`;
+  }
+
   const title = document.title;
   const url = document.URL;
 
@@ -11,22 +30,7 @@
   const author = author_tag == null ? "" : author_tag.content;
 
   const today = new Date();
-  let dd = today.getDate();
-  let mm = today.getMonth() + 1;
-  const yyyy = today.getFullYear();
-
-  // Add zero prefix:
-  if (dd < 10) {
-    dd = `0${dd}`;
-  }
-
-  // Add zero prefix:
-  if (mm < 10) {
-    mm = `0${mm}`;
-  }
-
-  // create string for date:
-  const urldate = `${yyyy}-${mm}-${dd}`;
+  const urldate = jsDate2bibTex(today);
 
   // remove special characters for citation key:
   let title_key = title.replace(/[^0-9a-z]/gi, "");
@@ -49,9 +53,12 @@
     .replace(/\u00dc/g, '\\"U')
     .replace(/\u00DF/g, '\\"s');
 
+  const date = jsDate2bibTex(new Date(document.lastModified));
+
   // generate BiBTeX entry:
   const bibTexEntry = `${type} {${citationKey},\r\
 \ \ title = {${title_tex}},\r\
+\ \ date = {${date}},\r\
 ${author ? `\ \ author = {${author}},\r` : ""}\
 \ \ file = {${filename}},\r\
 \ \ url = {${url}},\r\
