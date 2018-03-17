@@ -10,6 +10,8 @@ _small - flexible - magic!_
 
 Just click on the html2biblatex bookmark button and paste the collected content into your BibLaTeX code. 
 
+![Screenshot of popup window to copy the biblatex entry](./screenshot.png "html2biblatex Screenshot")
+
 --------------------------------------------------------
 
 Installation
