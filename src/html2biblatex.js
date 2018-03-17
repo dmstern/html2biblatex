@@ -32,18 +32,20 @@
   const today = new Date();
   const urldate = jsDate2bibTex(today);
 
+  const date = jsDate2bibTex(new Date(document.lastModified));
+
   // remove special characters for citation key:
   let title_key = title.replace(/[^0-9a-z]/gi, "");
 
   // create citation key:
-  const citationKey = `${title_key}-${urldate}`;
+  const citationKey = `${title_key}-${date}`;
 
   const type = "@Online";
   const filename = `:./references/${window.location.pathname
     .slice(1)
     .replace(/\//g, "-")}.html:html`;
 
-  // Replace german umalauts with latex commands:
+  // Replace german umlauts with latex commands:
   let title_tex = title
     .replace(/\u00e4/g, '\\"a')
     .replace(/\u00c4/g, '\\"A')
@@ -52,8 +54,6 @@
     .replace(/\u00fc/g, '\\"u')
     .replace(/\u00dc/g, '\\"U')
     .replace(/\u00DF/g, '\\"s');
-
-  const date = jsDate2bibTex(new Date(document.lastModified));
 
   // generate BiBTeX entry:
   const bibTexEntry = `${type} {${citationKey},\r\

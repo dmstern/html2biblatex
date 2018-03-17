@@ -32,13 +32,13 @@ Usage
 
 **Sample output:**
 ```BibLaTeX
-@Online {UsingBibTeXashortguide-2018-03-16,
+@Online {UsingBibTeXashortguide-2015-11-02,
  title = {Using BibTeX: a short guide},
  date = {2015-11-02},
  author = {Martin J. Osborne},
  file = {:./references/osborne-latex-BIBTEX.HTM.html:html},
  url = {https://www.economics.utoronto.ca/osborne/latex/BIBTEX.HTM},
- urldate = {2018-03-16}
+ urldate = {2018-03-17}
 }
 ```
 
