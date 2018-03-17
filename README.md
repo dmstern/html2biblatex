@@ -49,6 +49,8 @@ Usage
 
 Tested with Google Chrome and Epiphany (GNOME) under Ubuntu 13.10.
 
+----------------------------------------------------
+
 Build (for developers)
 ======================
 
