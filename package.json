@@ -1,7 +1,7 @@
 {
   "name": "html2biblatex",
   "version": "2.0.0",
-  "description": "a lightweight browser \"plugin\" for exporting web pages to BibLaTeX",
+  "description": "a tiny bookmarklet for exporting web pages to BibLaTeX",
   "main": "README.md",
   "repository": "git@github.com:dmstern/html2biblatex.git",
   "author": "Daniel Morgenstern <morgenstern.daniel@gmail.com>",
