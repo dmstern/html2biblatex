@@ -3,7 +3,7 @@ html2biblatex
 
 > Citing a webpage in LaTeX has never been easier!
 
-html2biblatex is a lightweight browser "plugin" for exporting web pages to BibLaTeX.
+html2biblatex is a lightweight bookmarklet for exporting web pages to BibLaTeX.
 
 _small - flexible - magic!_
 
