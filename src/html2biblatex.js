@@ -7,19 +7,26 @@
     let dd = date.getDate();
     let mm = date.getMonth() + 1;
     const yyyy = date.getFullYear();
-  
+
     // Add zero prefix:
     if (dd < 10) {
       dd = `0${dd}`;
     }
-  
+
     // Add zero prefix:
     if (mm < 10) {
       mm = `0${mm}`;
     }
-  
+
     // create string for date:
     return `${yyyy}-${mm}-${dd}`;
+  }
+
+  function date2YearTex(date) {
+    const yyyy = date.getFullYear();
+
+    // create string for year:
+    return `${yyyy}`;
   }
 
   const title = document.title;
@@ -32,7 +39,9 @@
   const today = new Date();
   const urldate = jsDate2bibTex(today);
 
-  const date = jsDate2bibTex(new Date(document.lastModified));
+  const lastModDate = new Date(document.lastModified);
+  const date = jsDate2bibTex(lastModDate);
+  const year = date2YearTex(lastModDate);
 
   // remove special characters for citation key:
   let title_key = title.replace(/[^0-9a-z]/gi, "");
@@ -59,6 +68,7 @@
   const bibTexEntry = `${type} {${citationKey},\r\
 \ \ title = {${title_tex}},\r\
 \ \ date = {${date}},\r\
+\ \ year = {${year}},\r\
 ${author ? `\ \ author = {${author}},\r` : ""}\
 \ \ file = {${filename}},\r\
 \ \ url = {${url}},\r\
