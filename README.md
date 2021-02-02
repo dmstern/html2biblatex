@@ -53,10 +53,10 @@ Tested with Google Chrome and Epiphany (GNOME) under Ubuntu 13.10.
 Build (for developers)
 ----------------------
 
-1. Install [yarn](https://yarnpkg.com/lang/en/docs/install/)
+1. Install [Node.js](https://nodejs.org/)
 2. In a terminal run
 
   ```bash
-  yarn install
-  yarn start
+  npm install
+  npm run build
   ```
