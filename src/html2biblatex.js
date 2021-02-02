@@ -39,9 +39,22 @@
   const today = new Date();
   const urldate = jsDate2bibTex(today);
 
-  const lastModDate = new Date(document.lastModified);
-  const date = jsDate2bibTex(lastModDate);
-  const year = date2YearTex(lastModDate);
+  const publishedTime = document
+    .querySelector('meta[property="article:published_time"')
+    ?.getAttribute("content");
+  const someTimeTag = document
+    .querySelector("time[datetime]")
+    ?.getAttribute("datetime");
+  const lastModifiedTime = document.lastModified;
+
+  const pageTime = new Date(
+    publishedTime ||
+      someTimeTag ||
+      someTimeTagWithoutDatetime ||
+      lastModifiedTime
+  );
+  const date = jsDate2bibTex(pageTime);
+  const year = date2YearTex(pageTime);
 
   // remove special characters for citation key:
   let title_key = title.replace(/[^0-9a-z]/gi, "");
