@@ -50,6 +50,10 @@ Tested with Google Chrome and Epiphany (GNOME) under Ubuntu 13.10.
 
 --------------------------------------------------------
 
+If you like this tool, please consider to upvote my answer on tex.stackexchange.com: https://tex.stackexchange.com/a/170689/48366
+
+--------------------------------------------------------
+
 Build (for developers)
 ----------------------
 
